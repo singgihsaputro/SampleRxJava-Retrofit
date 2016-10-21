@@ -1,4 +1,4 @@
-package com.example.singgihsaputro.samplerxwithretrofit.service;
+package com.example.singgihsaputro.samplerxwithretrofit.data.repository.api;
 
 import com.jakewharton.retrofit.Ok3Client;
 
@@ -10,7 +10,7 @@ import retrofit.client.OkClient;
  * Created by singgihsaputro on 10/18/16.
  */
 
-public class ServiceFactory {
+public class MovieAPIRepository {
     public static <T> T createRetrofitService(final Class<T> clazz, final String endPoint) {
 
         final RestAdapter restAdapter = new RestAdapter.Builder()

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.singgihsaputro.samplerxwithretrofit.R;
-import com.example.singgihsaputro.samplerxwithretrofit.model.Movie;
+import com.example.singgihsaputro.samplerxwithretrofit.data.entity.MovieEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,14 +17,14 @@ import java.util.List;
  */
 
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
-    List<Movie.Results> mItems;
+    List<MovieEntity.Results> mItems;
 
     public RvAdapter() {
         super();
-        mItems = new ArrayList<Movie.Results>();
+        mItems = new ArrayList<MovieEntity.Results>();
     }
 
-   public void addData(List<Movie.Results> movie) {
+   public void addData(List<MovieEntity.Results> movie) {
         mItems = movie;
         notifyDataSetChanged();
     }
@@ -44,7 +44,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        Movie.Results movie = mItems.get(i);
+        MovieEntity.Results movie = mItems.get(i);
         viewHolder.login.setText(movie.getOriginal_title());
         viewHolder.repos.setText("rating: " + movie.getVote_average());
         viewHolder.blog.setText("date: " + movie.getRelease_date());

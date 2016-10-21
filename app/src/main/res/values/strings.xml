@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">sampleRxwithRetrofit</string>
+    <string name="loading">Loasing...</string>
 </resources>

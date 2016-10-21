@@ -1,19 +1,25 @@
-package com.example.singgihsaputro.samplerxwithretrofit.model;
+package com.example.singgihsaputro.samplerxwithretrofit.data.entity;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by singgihsaputro on 10/18/16.
  */
 
-public class Movie {
+public class MovieEntity {
 
     @SerializedName("page")
     public int page;
     @SerializedName("results")
     public List<Results> results;
+    @SerializedName("total_results")
+    public int total_results;
+    @SerializedName("total_pages")
+    public int total_pages;
 
     public int getPage() {
         return page;
@@ -47,13 +53,51 @@ public class Movie {
         this.total_pages = total_pages;
     }
 
-    @SerializedName("total_results")
-    public int total_results;
-    @SerializedName("total_pages")
-    public int total_pages;
-
 
     public static class Results {
+        @SerializedName("poster_path")
+        public String poster_path;
+        @SerializedName("adult")
+        public boolean adult;
+        @SerializedName("overview")
+        public String overview;
+        @SerializedName("release_date")
+        public String release_date;
+        @SerializedName("id")
+        public int id;
+        @SerializedName("original_title")
+        public String original_title;
+        @SerializedName("original_language")
+        public String original_language;
+        @SerializedName("title")
+        public String title;
+        @SerializedName("backdrop_path")
+        public String backdrop_path;
+        @SerializedName("popularity")
+        public double popularity;
+        @SerializedName("vote_count")
+        public int vote_count;
+        @SerializedName("video")
+        public boolean video;
+        @SerializedName("vote_average")
+        public double vote_average;
+
+        public Results(String poster_path, boolean adult, String overview, String release_date, int id, String original_title, String original_language, String title, String backdrop_path, double popularity, int vote_count, boolean video, double vote_average) {
+            this.poster_path = poster_path;
+            this.adult = adult;
+            this.overview = overview;
+            this.release_date = release_date;
+            this.id = id;
+            this.original_title = original_title;
+            this.original_language = original_language;
+            this.title = title;
+            this.backdrop_path = backdrop_path;
+            this.popularity = popularity;
+            this.vote_count = vote_count;
+            this.video = video;
+            this.vote_average = vote_average;
+        }
+
         public String getPoster_path() {
             return poster_path;
         }
@@ -158,31 +202,14 @@ public class Movie {
             this.vote_average = vote_average;
         }
 
-        @SerializedName("poster_path")
-        public String poster_path;
-        @SerializedName("adult")
-        public boolean adult;
-        @SerializedName("overview")
-        public String overview;
-        @SerializedName("release_date")
-        public String release_date;
-        @SerializedName("id")
-        public int id;
-        @SerializedName("original_title")
-        public String original_title;
-        @SerializedName("original_language")
-        public String original_language;
-        @SerializedName("title")
-        public String title;
-        @SerializedName("backdrop_path")
-        public String backdrop_path;
-        @SerializedName("popularity")
-        public double popularity;
-        @SerializedName("vote_count")
-        public int vote_count;
-        @SerializedName("video")
-        public boolean video;
-        @SerializedName("vote_average")
-        public double vote_average;
+        public Map<String, Object> toMap() {
+            HashMap<String, Object> result = new HashMap<>();
+            result.put("title", title);
+            result.put("original_title", original_title);
+            result.put("release_date", release_date);
+            result.put("vote_average", vote_average);
+
+            return result;
+        }
     }
 }

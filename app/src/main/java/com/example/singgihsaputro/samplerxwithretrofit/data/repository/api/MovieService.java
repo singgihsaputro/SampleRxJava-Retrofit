@@ -1,6 +1,6 @@
-package com.example.singgihsaputro.samplerxwithretrofit.service;
+package com.example.singgihsaputro.samplerxwithretrofit.data.repository.api;
 
-import com.example.singgihsaputro.samplerxwithretrofit.model.Movie;
+import com.example.singgihsaputro.samplerxwithretrofit.data.entity.MovieEntity;
 
 import retrofit.http.GET;
 import retrofit.http.Query;
@@ -14,6 +14,6 @@ public interface MovieService {
     String SERVICE_ENDPOINT = "http://api.themoviedb.org";
 
     @GET("/3/movie/popular")
-    Observable<Movie> getMoviesPopular(@Query("api_key") String apiKey);
+    MovieEntity getMoviesPopular(@Query("api_key") String apiKey);
 
 }
