@@ -5,9 +5,6 @@ Branch master<br>
 <br>
 Branch mvp-clean<br>
 <ul><li>Sample using RxJava and Retrofit with MVP Clean Architecture Pattern</li></ul>
-<br>
-Branch rxjava-operator<br>
-<ul><li>Sample using RxJava and some functional operator (ongoing)</li></ul>
 
 <br>
 Preview :
