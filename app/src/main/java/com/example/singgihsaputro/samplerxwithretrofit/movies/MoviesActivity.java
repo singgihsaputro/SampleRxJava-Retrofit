@@ -65,7 +65,7 @@ public class MoviesActivity extends BaseActivity implements MoviesContract.View{
 
     @OnClick(R.id.button_fetch)
     public void fetchMovies(){
-        moviesPresenter.getListMovies();
+        moviesPresenter.subscribe();
     }
 
     @Override

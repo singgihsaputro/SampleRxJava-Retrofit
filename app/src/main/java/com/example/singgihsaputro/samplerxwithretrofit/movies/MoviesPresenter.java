@@ -62,11 +62,11 @@ public class MoviesPresenter implements MoviesContract.Presenter{
 
     @Override
     public void subscribe() {
-
+        getListMovies();
     }
 
     @Override
     public void unsubscribe() {
-
+        getMovies.unsubscribe();
     }
 }
