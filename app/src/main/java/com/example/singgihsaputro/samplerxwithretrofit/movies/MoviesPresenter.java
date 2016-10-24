@@ -58,6 +58,7 @@ public class MoviesPresenter implements MoviesContract.Presenter{
             }
 
         });
+
     }
 
     @Override

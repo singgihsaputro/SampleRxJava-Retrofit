@@ -92,4 +92,10 @@ public class MoviesActivity extends BaseActivity implements MoviesContract.View{
     public void setPresenter(MoviesContract.Presenter presenter) {
         this.moviesPresenter = presenter;
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        moviesPresenter.unsubscribe();
+    }
 }
