@@ -9,3 +9,6 @@ Branch mvp-clean<br>
 Branch rxjava-operator<br>
 <ul><li>Sample using RxJava and some functional operator (ongoing)</li></ul>
 
+<br>
+Preview :
+![Alt text](https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/rxjava-operator/screenshoot.png "screenshoot")
