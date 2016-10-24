@@ -1,5 +1,6 @@
 package com.example.singgihsaputro.samplerxwithretrofit.movies;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,6 +27,7 @@ public class MoviesActivity extends BaseActivity implements MoviesContract.View{
 
     RvAdapter mCardAdapter;
     private MoviesContract.Presenter moviesPresenter;
+    private ProgressDialog pDialog;
 
     @Override
     public int getLayout() {
@@ -36,6 +38,7 @@ public class MoviesActivity extends BaseActivity implements MoviesContract.View{
     public void setup() {
         mCardAdapter = new RvAdapter();
         initRecyclerView(mCardAdapter);
+        initProgressDialog();
         initPresenter();
     }
 
@@ -47,6 +50,12 @@ public class MoviesActivity extends BaseActivity implements MoviesContract.View{
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mCardAdapter);
+    }
+
+    private void initProgressDialog() {
+        pDialog = new ProgressDialog(this);
+        pDialog.setMessage("Loading...");
+        pDialog.setCanceledOnTouchOutside(false);
     }
 
     @OnClick(R.id.button_clear)
@@ -61,17 +70,17 @@ public class MoviesActivity extends BaseActivity implements MoviesContract.View{
 
     @Override
     public void onLoading() {
-        Toast.makeText(getApplicationContext(), "Loading...", Toast.LENGTH_SHORT).show();
+        pDialog.show();
     }
 
     @Override
     public void onLoadSuccess() {
-        Toast.makeText(getApplicationContext(), "Load Success", Toast.LENGTH_SHORT).show();
+        pDialog.hide();
     }
 
     @Override
     public void onLoadFailed() {
-        Toast.makeText(getApplicationContext(), "Load Failed", Toast.LENGTH_SHORT).show();
+        pDialog.hide();
     }
 
     @Override

@@ -17,19 +17,17 @@
             android:id="@+id/button_clear"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:background="#008B75"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:textColor="#ffffff"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:text="Clear" />
         <Button
             android:id="@+id/button_fetch"
             android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:background="#008B75"
             android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_marginLeft="10dp"
-            android:textColor="#ffffff"
             android:text="Fetch" />
 
     </LinearLayout>

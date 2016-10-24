@@ -35,6 +35,7 @@ public class MoviesPresenter implements MoviesContract.Presenter{
 
     @Override
     public void getListMovies() {
+        view.onLoading();
         getMovies.setApiKey(Constant.API_KEY);
         getMovies.execute(new Subscriber<MovieEntity>() {
             @Override
@@ -45,6 +46,7 @@ public class MoviesPresenter implements MoviesContract.Presenter{
             @Override
             public void onError(Throwable e) {
                 Log.e("MoviesDemo", e.getMessage());
+                view.onLoadFailed();
             }
 
             @Override
@@ -52,6 +54,7 @@ public class MoviesPresenter implements MoviesContract.Presenter{
                 List<MovieEntity.Results> rs = results.getResults();
                 Log.d("Size data json", String.valueOf(rs.size()));
                 view.addData(rs);
+                view.onLoadSuccess();
             }
 
         });
