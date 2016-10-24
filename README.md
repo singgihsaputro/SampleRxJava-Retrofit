@@ -11,4 +11,5 @@ Branch rxjava-operator<br>
 
 <br>
 Preview :
-![Alt text](https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/rxjava-operator/screenshoot.png "screenshoot")
+
+<img src="https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/rxjava-operator/screenshoot.png" data-canonical-src="https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/rxjava-operator/screenshoot.png" width="400" height="700" />
