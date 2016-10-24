@@ -9,4 +9,4 @@ Branch mvp-clean<br>
 <br>
 Preview :
 
-<img src="https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/rxjava-operator/screenshoot.png" data-canonical-src="https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/rxjava-operator/screenshoot.png" width="400" height="700" />
+<img src="https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/mvp-clean/screenshoot.png" data-canonical-src="https://github.com/singgihsaputra/SampleRxJava-Retrofit/blob/mvp-clean/screenshoot.png" width="400" height="700" />
